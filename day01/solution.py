@@ -3,8 +3,8 @@
 input_file = open('input.txt', 'r')
 lines = input_file.readlines()
 
-part1_total = 0
-part2_total = 0
+part1_ans = 0
+part2_ans = 0
 
 for line in lines:
 	numbers = []
@@ -12,7 +12,7 @@ for line in lines:
 		if c.isdigit():
 			numbers.append(c)
 	if len(numbers) > 0:
-		part1_total += int(numbers[0] + numbers[-1])
+		part1_ans += int(numbers[0] + numbers[-1])
 
 for line in lines:
 	numbers = []
@@ -23,7 +23,7 @@ for line in lines:
 			if line[j:].startswith(name):
 				numbers.append(str(value + 1))
 	if len(numbers) > 0:
-		part2_total += int(numbers[0] + numbers[-1])
+		part2_ans += int(numbers[0] + numbers[-1])
 
-print("Part 1 answer: " + str(part1_total))
-print("Part 2 answer: " + str(part2_total))
+print("Part 1 answer: " + str(part1_ans))
+print("Part 2 answer: " + str(part2_ans))
